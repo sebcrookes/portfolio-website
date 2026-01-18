@@ -43,17 +43,14 @@
             </div>
         </nav>
 
-        <div id="nav-menu-backdrop" onclick="closeHamburgerMenu()">
-            <div id="nav-menu">
-                <ul class="nav-menu-links">
-                    <h1 id="nav-menu-title" class="unselectable">Options</h1>
-                    <li><a class="nav-menu-link" onclick="scrollToSection('top')">About</a></li>
-                    <li><a class="nav-menu-link" onclick="scrollToSection('education-section')">Education</a></li>
-                    <li><a class="nav-menu-link" onclick="scrollToSection('projects-section')">Projects</a></li>
-                    <li><a class="nav-menu-link" onclick="scrollToSection('contact-section')">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+        <div id="nav-menu-backdrop" onclick="closeHamburgerMenu()"></div>
+        <ul id="nav-menu">
+            <h1 id="nav-menu-title" class="unselectable">Options</h1>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('top')">About</a></li>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('education-section')">Education</a></li>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('projects-section')">Projects</a></li>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('contact-section')">Contact</a></li>
+        </ul>
 
         <canvas id="particle-canvas"></canvas>
 
@@ -74,7 +71,7 @@
 
                     <a href="https://uk.linkedin.com/in/sebastian-crookes">
                         <div id="linkedin-button">
-                            <svg id="linkedin-svg" transform="translate(0, 1)" width="85px" height="21px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" version="1.1" focusable="false" class="lazy-loaded" aria-busy="false">
+                            <svg id="linkedin-svg" width="85px" height="21px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" version="1.1" focusable="false" class="lazy-loaded" aria-busy="false">
                                 <g style="color: white; fill-opacity: 0.9">
                                     <g>
                                         <g class="inbug" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -113,9 +110,7 @@
                                 <span class="institution">University of St Andrews</span> - 
                                 <span class="studied-title">Computer Science MSci</span><br>
                                 <span class="studied-subtext">
-                                    2025-29 - 
-                                    <span class="studied-details">Direct entry to 2nd year</span>
-                                    <span class="studied-min-details"><span style="text-decoration: underline; color: #4aa8d9;">see more</span></span>
+                                    2025-29 - Direct entry to 2nd year
                                 </span>
                             </div>
                         </li>
@@ -125,9 +120,7 @@
                                 <span class="institution">Shebbear College</span> - 
                                 <span class="studied-title">A Levels</span><br>
                                 <span class="studied-subtext">
-                                    2023-25 - 
-                                    <span class="studied-details">A*A*A*A* in Computer Science, Further Maths, Maths and Physics</span>
-                                    <span class="studied-min-details"><span style="color: #DBDBDB;">4 A*s</span> - <span style="text-decoration: underline; color: #4aa8d9;">see more</span></span>
+                                    2023-25 - A*A*A*A* in Computer Science, Further Maths, Maths and Physics
                                 </span>
                             </div>
                         </li>
@@ -137,9 +130,7 @@
                                 <span class="institution">Shebbear College</span> - 
                                 <span class="studied-title">GCSEs</span><br>
                                 <span class="studied-subtext">
-                                    2010-23 - 
-                                    <span class="studied-details">10 grade 9s, 2 grade 8s</span>
-                                    <span class="studied-min-details"><span style="text-decoration: underline; color: #4aa8d9;">see more</span></span>
+                                    2010-23 - 10 grade 9s, 2 grade 8s
                                 </span>
                             </div>
                         </li>
@@ -153,9 +144,7 @@
                                 <span class="institution">Trinity College London</span> - 
                                 <span class="studied-title">ATCL Piano</span><br>
                                 <span class="studied-subtext">
-                                    2023-25 - 
-                                    <span class="studied-details">Piano diploma equivalent to undergraduate 1st year</span>
-                                    <span class="studied-min-details"><span style="text-decoration: underline; color: #4aa8d9;">see more</span></span>
+                                    2023-25 - Piano diploma equivalent to undergraduate 1st year
                                 </span>
                             </div>
                         </li>

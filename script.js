@@ -2,23 +2,33 @@
 
 /* ======= Navigation bar + menu ======= */
 
-function setBackdropVisibility(visibility) {
-    let backdrop = document.querySelector("#nav-menu-backdrop");
-    backdrop.style.visibility = visibility;
-}
-
 function openHamburgerMenu() {
     let backdrop = document.querySelector("#nav-menu-backdrop");
-    setBackdropVisibility("visible");
+    backdrop.style.visibility = "visible";
     backdrop.style.opacity = 1;
     backdrop.style.pointerEvents = "auto";
+
+    let menu = document.querySelector("#nav-menu");
+    menu.style.visibility = "visible";
+    menu.style.opacity = 1;
+    menu.style.pointerEvents = "auto";
 }
 
 function closeHamburgerMenu() {
     let backdrop = document.querySelector("#nav-menu-backdrop");
     backdrop.style.opacity = 0;
     backdrop.style.pointerEvents = "none";
-    setTimeout(function() { setBackdropVisibility("hidden"); }, 300);
+    setTimeout(function() { backdrop.style.visibility = "hidden"; }, 300);
+
+    let menu = document.querySelector("#nav-menu");
+    menu.style.opacity = 0;
+    menu.style.pointerEvents = "none";
+    setTimeout(function() { menu.style.visibility = "hidden"; }, 300);
+}
+
+function menuScrollTo(sectionID) {
+    closeHamburgerMenu();
+    scrollToSection(sectionID);
 }
 
 function scrollToSection(sectionID) {
@@ -35,7 +45,6 @@ function scrollToSection(sectionID) {
     // the height of the nav bar (to ensure it is visible), and scroll to it.
 
     let section = document.querySelector("#" + sectionID);
-
     let nav = document.querySelector("#nav-blur");
 
     let position = section.getBoundingClientRect().top + window.pageYOffset - nav.getBoundingClientRect().height;
