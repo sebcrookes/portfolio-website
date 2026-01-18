@@ -362,7 +362,6 @@ nav {
     font-style: normal;
 
     text-shadow: 0 0 50px #1f749c77;
-
 }
 
 #welcome-subtitle {
@@ -716,6 +715,7 @@ nav {
 
     #formal-education-list {
         width: 100vw;
+        border-right: none;
     }
 
     #prof-cert-list {
@@ -782,7 +782,6 @@ nav {
     position: relative;
     display: grid;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
     grid-template-columns: auto auto;
     gap: 20px;    
@@ -790,6 +789,7 @@ nav {
 
 #projects-list li {
     list-style: none;
+    height: fit-content;
 }
 
 .project {
@@ -883,8 +883,10 @@ nav {
     #projects-list {
         grid-template-columns: auto;
     }
+
     .project {
         width: 90vw;
+        max-width: 800px;
     }
 
     .project-image {
@@ -938,7 +940,8 @@ nav {
 #contact-subsection {
     position: relative;
 
-    width: 60vw;
+    width: calc(80vw + 20px);
+    max-width: 1220px;
     height: auto;
     padding: 20px;
 
@@ -1066,9 +1069,10 @@ nav {
     background-color: #BBBBBB;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     #contact-subsection{
         width: 90vw;
+        max-width: 800px;
     }
 }
 
