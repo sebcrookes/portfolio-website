@@ -239,7 +239,7 @@ nav {
     transform: translate(-50%, -50%);
 
     background-color: #FFFFFF0C;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 
     border-radius: 50px;
     border-color: #FFFFFF20;
@@ -268,26 +268,6 @@ nav {
 
 .nav-menu li {
     list-style: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-
-    transition: scale .2s ease-in-out;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 2vh;
 }
 
 .nav-menu-link {
@@ -298,13 +278,21 @@ nav {
     padding-right: 20px;
     padding-bottom: 11px;
 
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 2vh;
+
     border-style: solid;
     border-radius: 100000000px;
     border-width: 1px;
     border-color: #FFFFFF20;
 
     background-color: #FFFFFF20;
-    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+    user-select: none;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
@@ -312,12 +300,8 @@ nav {
     transition: color .1s ease-in-out, background-color .1s ease-in-out;
 }
 
-.nav-menu li:hover {
-    scale: 102%;
-}
-
 .nav-menu-link:hover {
-    background-color: #FFFFFF20;
+    background-color: #FFFFFF30;
     color: #2B8DC2;
 }
 
@@ -399,7 +383,7 @@ nav {
     background-color: #FFFFFF0C;
     border-color: #FFFFFF20;
 
-    transition: background-color .2s ease-in-out;
+    transition: background-color .1s ease-in-out;
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
@@ -408,13 +392,13 @@ nav {
 #github-svg {
     position: relative;
     transform: translateY(2px);
-    transition: scale .2s ease-in-out;
+    transition: scale .1s ease-in-out;
 }
 
 #github-button:hover {
     background-color: #FFFFFF20;
     scale: 102%;
-    transition: scale .2s ease-in-out;
+    transition: scale .1s ease-in-out;
 }
 
 #linkedin-button {
@@ -433,7 +417,7 @@ nav {
     background-color: #FFFFFF0C;
     border-color: #FFFFFF20;
 
-    transition: background-color .2s ease-in-out;
+    transition: background-color .1s ease-in-out;
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
@@ -442,13 +426,13 @@ nav {
 #linkedin-svg {
     position: relative;
     transform: translateY(2px);
-    transition: scale .2s ease-in-out;
+    transition: scale .1s ease-in-out;
 }
 
 #linkedin-button:hover {
     background-color: #FFFFFF20;
     scale: 102%;
-    transition: scale .2s ease-in-out;
+    transition: scale .1s ease-in-out;
 }
 
 #welcome-bottom-blur {
@@ -510,6 +494,10 @@ nav {
     width: 100%;
     height: auto;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin-bottom: 50px;
 }
 
@@ -525,6 +513,10 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+
+    width: 90vw;
+
+    max-width: 1220px;
 }
 
 /* === Formal education === */
@@ -556,9 +548,8 @@ nav {
     padding: 10px;
     padding-right: 25px;
     margin-bottom: 15px;
-    margin-right: 10px;
 
-    max-width: 80%;
+    max-width: 90%;
 
     display: flex;
     justify-content: space-around;
@@ -571,7 +562,7 @@ nav {
     overflow: hidden;
 
     border-style: solid;
-    border-radius: 50px;
+    border-radius: 20px;
     border-width: 1px;
     background-color: #1B1B1B;
     background-image: radial-gradient(#101010, #1B1B1B);
@@ -656,9 +647,8 @@ nav {
     padding: 10px;
     padding-right: 25px;
     margin-bottom: 15px;
-    margin-right: 10px;
 
-    max-width: 80%;
+    max-width: 90%;
 
     display: flex;
     justify-content: space-around;
@@ -666,10 +656,10 @@ nav {
 
     backdrop-filter: blur(4px);
 
-    box-shadow: 4px 4px 5px #FFFFFF10;
+    box-shadow: -4px 4px 5px #FFFFFF10;
 
     border-style: solid;
-    border-radius: 50px;
+    border-radius: 20px;
     border-width: 1px;
     background-color: #1B1B1B;
     background-image: radial-gradient(#101010, #1B1B1B);
@@ -714,13 +704,23 @@ nav {
     }
 
     #formal-education-list {
-        width: 100vw;
+        width: 90vw;
         border-right: none;
     }
 
+    #formal-education-list li {
+        max-width: 90vw;
+        transform: translateX(0px);
+    }
+
     #prof-cert-list {
-        width: 100vw;
+        width: 90vw;
         margin-top: 30px;
+    }
+
+    #prof-cert-list li {
+        max-width: 90vw;
+        transform: translateX(0px);
     }
 }
 
@@ -949,7 +949,7 @@ nav {
 
     border-style: solid;
     border-width: 1px;
-    border-radius: 50px;
+    border-radius: 20px;
     border-color: #FFFFFF20;
     background-color: #1B1B1B;
 
@@ -977,6 +977,7 @@ nav {
 }
 
 #contact-form input {
+    all: unset;
     position: relative;
     width: 70%;
 
@@ -984,6 +985,8 @@ nav {
     margin-bottom: 10px;
     box-sizing: border-box;
 
+    font-family: "Outfit", sans-serif;
+    font-size: 0.85em;
     color: white;
 
     border-style: solid;
@@ -1000,6 +1003,7 @@ nav {
 }
 
 #contact-form textarea {
+    all: unset;
     position: relative;
     width: 70%;
     height: 10vh;
