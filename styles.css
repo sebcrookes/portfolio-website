@@ -559,6 +559,7 @@ nav {
     box-shadow: 4px 4px 5px #FFFFFF10;
 
     overflow: hidden;
+    text-wrap: wrap;
 
     list-style: none;
 
@@ -704,6 +705,9 @@ nav {
 
     backdrop-filter: blur(4px);
 
+    overflow: hidden;
+    text-wrap: wrap;
+
     box-shadow: -4px 4px 5px #FFFFFF10;
 
     border-style: solid;
@@ -757,8 +761,7 @@ nav {
     }
 
     #formal-education-list li {
-        max-width: 90vw;
-        transform: translateX(0px);
+        width: 100%;
     }
 
     #prof-cert-list {
@@ -767,8 +770,7 @@ nav {
     }
 
     #prof-cert-list li {
-        max-width: 90vw;
-        transform: translateX(0px);
+        width: 100%;
     }
 }
 
