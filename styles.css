@@ -542,24 +542,25 @@ nav {
 }
 
 #formal-education-list li {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+#formal-education-list > li {
     position: relative;
-    width: fit-content;
+    width: 90%;
     height: auto;
     padding: 10px;
     padding-right: 25px;
     margin-bottom: 15px;
-
-    max-width: 90%;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 
     backdrop-filter: blur(4px);
 
     box-shadow: 4px 4px 5px #FFFFFF10;
 
     overflow: hidden;
+
+    list-style: none;
 
     border-style: solid;
     border-radius: 20px;
@@ -584,12 +585,12 @@ nav {
     -webkit-tap-highlight-color: transparent;
 }
 
-#formal-education-list li:hover {
+#formal-education-list > li:hover {
     background-image: radial-gradient(#222222, #333333);
     background-color: #303030;
 }
 
-#formal-education-list li img {
+#formal-education-list > li img {
     position: relative;
     height: 50px;
     object-fit: contain;
@@ -604,10 +605,56 @@ nav {
     font-size: 110%;
 }
 
+.studied-overview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
 .studied-subtext {
     font-size: 15px;
     color: #CCCCCC;
-    line-height: 0;
+    display: inline-block;
+
+    margin-top: 4px;
+}
+
+.studied-date {
+    border: -2px #444444 solid;
+    border-radius: 500px;
+    background-color: #444444;
+
+    margin-left: -2px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+}
+
+.studied-emphasis {
+    font-weight: bold;
+    color: #EEEEEE;
+}
+
+.studied-details {
+    position: relative;
+
+    padding-top: 8px;
+    padding-left: 65px;
+
+    font-size: 15px;
+    color: #CCCCCC;
+}
+
+.studied-overview a {
+    color: #BECACE;
+    text-decoration: none;
+}
+
+.studied-details a {
+    color: #BECACE;
+    text-decoration: none;
 }
 
 .education-connecting-line {
@@ -641,18 +688,19 @@ nav {
 }
 
 #prof-cert-list li {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+#prof-cert-list > li {
     position: relative;
-    width: fit-content;
+    width: 90%;
     height: auto;
     padding: 10px;
     padding-right: 25px;
     margin-bottom: 15px;
 
-    max-width: 90%;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    list-style: none;
 
     backdrop-filter: blur(4px);
 
@@ -683,12 +731,12 @@ nav {
     will-change: transform, opacity, filter;
 }
 
-#prof-cert-list li:hover {
+#prof-cert-list > li:hover {
     background-image: radial-gradient(#222222, #333333);
     background-color: #303030;
 }
 
-#prof-cert-list li img {
+#prof-cert-list > li img {
     position: relative;
     height: 50px;
     object-fit: contain;
@@ -698,7 +746,7 @@ nav {
     border-radius: 50%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #education-subsections {
         flex-direction: column;
     }
@@ -724,16 +772,6 @@ nav {
     }
 }
 
-@media (max-width: 430px) {
-    .institution {
-        font-size: 90%;
-    }
-
-    .studied-subtext {
-        font-size: 13px;
-    }
-}
-
 /* Animations when items become visible */
 
 .formal-education-come-in {
@@ -742,7 +780,7 @@ nav {
     animation: education-animation 0.8s ease forwards;
 }
 .formal-education-come-in:nth-child(odd) {
-  animation-duration: 0.7s; /* So they look staggered */
+    animation-duration: 0.7s; /* So they look staggered */
 }
 
 .prof-cert-come-in {
@@ -752,7 +790,7 @@ nav {
 }
 
 .prof-cert-come-in:nth-child(odd) {
-  animation-duration: 0.7s; /* So they look staggered */
+    animation-duration: 0.7s; /* So they look staggered */
 }
 
 @keyframes education-animation {
@@ -1116,6 +1154,7 @@ footer {
     
     animation: fadeIn 1s forwards;
 }
+
 @keyframes fadeIn {
     0% {
         filter: blur(50px);
@@ -1126,7 +1165,7 @@ footer {
         opacity: 0;
     }
     100% {
-        filter: blur(2px);
+        filter: blur(1px);
         opacity: 1;
     }
 }

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     particleCanvas.width = window.innerWidth;
     particleCanvas.height = window.innerHeight;
 
-    const density = 0.0004; // Particles per pixel
+    const density = 0.0003; // Particles per pixel
     const numParticles = particleCanvas.width * particleCanvas.height * density;
 
     const context = particleCanvas.getContext("2d");
