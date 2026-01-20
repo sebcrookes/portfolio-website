@@ -339,6 +339,7 @@ nav {
     position: relative;
     background: -webkit-linear-gradient(#2B8DC2, #0b2736);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     font-family: "Spicy Rice", sans-serif;
