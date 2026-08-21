@@ -197,6 +197,19 @@
                 
                 <ul id="projects-list">
                     <li><div class="project">
+                        <h2 class="project-title">Sigroute</h2>
+                        <div class="project-contents">
+                            <img class="project-image undraggable" draggable="false" id="sigroute-image" src="images/sigroute.png" onclick="enlargeImage('sigroute-image');" alt="Image of desktop application allowing automation of tasks on Linux">
+                            <div class="project-description">
+                                Sigroute is a Linux-native automation system architected and implemented by myself in Rust. It has a decoupled design - a long-running, stable
+                                and reliable daemon runs in the background, managing the execution of automations and utilising SQLite for persistence of automations. This
+                                communicates with a GUI application using D-Bus IPC. The responsive frontend is built with GTK4 and modern libadwaita standards to fit in with
+                                the GNOME ecosystem, and the structure resembles the MVC pattern for extensibility. All of this is supported by the safety and efficiency of Rust.
+                            </div>
+                        </div>
+                    </div></li>
+
+                    <li><div class="project">
                         <h2 class="project-title">BambooOS</h2>
                         <div class="project-contents">
                             <img class="project-image undraggable" draggable="false" id="bamboo-os-image" src="images/bamboo-os.png" onclick="enlargeImage('bamboo-os-image');" alt="Screenshot of homemade operating system, called BambooOS">
@@ -216,7 +229,7 @@
                             </div>
                         </div>
                     </div></li>
-                    
+
                     <li><div class="project">
                         <h2 class="project-title">Engine Simulator</h2>
                         <div class="project-contents">
