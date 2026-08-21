@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sebastian Crookes</title>
+
+        <link href="styles.css" rel="stylesheet">
+
+        <link rel="icon" href="favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&family=Outfit:wght@300&display=block" rel="stylesheet">
+
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="particles.js"></script>
+    </head>
+    <body>
+        <div id="nav-blur"></div>
+        
+        <nav>
+            <div class="logo unselectable">
+                <h4>Seb C</h4>
+            </div>
+
+            <ul class="nav-links">
+                <li><a class="nav-link" onclick="scrollToSection('top')">About</a></li>
+                <li><a class="nav-link" onclick="scrollToSection('education-section')">Education</a></li>
+                <li><a class="nav-link" onclick="scrollToSection('projects-section')">Projects</a></li>
+                <li><a class="nav-link" onclick="scrollToSection('contact-section')">Contact</a></li>
+            </ul>
+
+            <div id="nav-menu-hamburger" onclick="openHamburgerMenu()">
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                    <rect fill="white" width="100" height="10" rx="5" ry="5"></rect>
+                    <rect fill="white" y="25" width="100" height="10" rx="5" ry="5"></rect>
+                    <rect fill="white" y="50" width="100" height="10" rx="5" ry="5"></rect>
+                </svg>
+            </div>
+        </nav>
+
+        <div id="nav-menu-backdrop" onclick="closeHamburgerMenu()"></div>
+        <ul id="nav-menu">
+            <h1 id="nav-menu-title" class="unselectable">Options</h1>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('top')">About</a></li>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('education-section')">Education</a></li>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('projects-section')">Projects</a></li>
+            <li><a class="nav-menu-link" onclick="menuScrollTo('contact-section')">Contact</a></li>
+        </ul>
+
+        <canvas id="particle-canvas"></canvas>
+
+        <div id="welcome-section">
+            <div id="welcome-container">
+                
+                <h1 id="welcome-title">I produce software with <span id="welcome-keywords">precision.</span></h1>
+
+                <h2 id="welcome-subtitle">Hello, I'm Sebastian Crookes - a CS student from the UK with a hard-working attitude and a love for programming.</h2>
+
+                <div id="welcome-buttons">
+                    <p style="text-wrap: nowrap;">View my profiles on:</p>
+                    <a href="https://github.com/sebcrookes" id="github-button">
+                        GitHub
+                    </a>
+
+                    <a href="https://uk.linkedin.com/in/sebastian-crookes" id="linkedin-button">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-section">
+            <div id="welcome-bottom-blur"></div>
+            <div id="education-section">
+                <h1 id="education-title" class="unselectable">Education</h2>
+
+                <div id="education-subsections">
+                    <ul id="formal-education-list">
+                        <h2 id="formal-education-title">Formal Education</h2>
+                        <div class="education-connecting-line"></div>
+                        <li>
+                            <div class="studied-overview">
+                                <img src="images/st-andrews-logo.png" role="presentation" alt="">
+                                <div>
+                                    <span class="institution">University of St Andrews</span> - 
+                                    <span class="studied-title">Computer Science MSci</span><br>
+                                    <span class="studied-subtext">
+                                        <span class="studied-date">2025-29</span> | <span class="studied-emphasis">Best in Year 2 CS</span> (19.2/20.0)
+                                    </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="studied-details">
+                                <span class="studied-emphasis">Year Grades:</span>
+                                <ul>
+                                    <li>Year 2 - <span class="studied-emphasis">19.2/20.0</span> (first class)</li>
+                                </ul>
+                                <br>
+
+                                <span class="studied-emphasis">Prizes & Achievements:</span>
+                                <ul>
+                                    <li><b>Best in Second Year Prize</b> - Awarded for being the highest performing student in second year, sponsored by KANA Software (Verint Systems)</li>
+                                    <li>Medal (<b>Best in Year</b>) - CS2003 Advanced Internet Programming, with 19.9/20.0</li>
+                                    <li><b>Dean's List (2025/26)</b> - placed on the Dean's List for academic achievement</li>
+                                    <li>Entered via <b>Direct Entry to Year 2</b> due to qualifications and experience</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="studied-overview">
+                                <div>
+                                    <span class="institution">Shebbear College</span> - 
+                                    <span class="studied-title">A Levels</span><br>
+                                    <span class="studied-subtext">
+                                        <span class="studied-date">2023-25</span> | <span class="studied-emphasis">Grade: A*A*A*A*</span> in Computer Science, Further Maths, Maths and Physics (top <a href="https://www.gov.uk/government/publications/qualification-results-in-england-summer-2025/qualification-results-in-england-summer-2025-accessible">0.7%</a> of England)
+                                    </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="studied-details">
+                                <span class="studied-emphasis">Other Achievements & Activities:</span><br>
+                                <ul>
+                                    <li>Head of School from 2024-25 - this involved large amounts of public speaking, teamwork, and responsibility</li>
+                                    <li>Best in School for A Level Results 2025</li>
+                                    <li>Best in School Computer Science and Mathematics Prizes</li>
+                                    <li>Further Mathematics GCSE mentor</li>
+                                    <li>Academic and Music Scholar</li>
+                                 </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="studied-overview">
+                                <div>
+                                    <span class="institution">Shebbear College</span> - 
+                                    <span class="studied-title">GCSEs (1-9)</span><br>
+                                    <span class="studied-subtext">
+                                        <span class="studied-date">2010-23</span> | <span class="studied-emphasis">10 grade 9s, 2 grade 8s</span> - 9 is the top grade
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul id="prof-cert-list">
+                        <h2 id="prof-cert-title">Professional Certifications</h2>
+                        <li>
+                            <div class="studied-overview">
+                                <div>
+                                    <span class="institution">IBM</span> - 
+                                    <span class="studied-title">DevOps and Software Engineering Professional Certificate</span><br>
+                                    <span class="studied-subtext">
+                                        <span class="studied-date">2026</span> - 15-course certificate spanning 240 hours
+                                    </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="studied-details">
+                                <span class="studied-emphasis">Covered areas including:</span><br>
+                                <ul>
+                                    <li>DevOps with Agile + Scrum</li>
+                                    <li>CI/CD<br></li>
+                                    <li>RESTful APIs<br></li>
+                                    <li>Docker + Kubernetes<br></li>
+                                    <li>Microservices and Serverless<br></li>
+                                    <li>TDD + BDD (Gherkin, Cucumber, Selenium)</li>
+                                    <li>Security, Monitoring and Observability<br></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="studied-overview">
+                                <div>
+                                    <span class="institution">Trinity College London</span> - 
+                                    <span class="studied-title">ATCL Piano</span><br>
+                                    <span class="studied-subtext">
+                                        <span class="studied-date">2023-25</span> - Piano diploma equivalent to undergraduate 1st year
+                                    </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="studied-details">
+                                Involved performances of a wide range of repertoire (including pieces by Mozart, Bach, Ravel, Debussy and Brahms) for roughly 38 minutes.
+                                <br><br>
+                                While preparing for the diploma, I was a finalist in the ISA Young Musician of the Year competition in 2024, held at St Hilda's College Oxford.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="projects-section">
+                <h1 id="projects-title" class="unselectable">Projects</h1>
+                
+                <ul id="projects-list">
+                    <li><div class="project">
+                        <h2 class="project-title">BambooOS</h2>
+                        <div class="project-contents">
+                            <img class="project-image undraggable" draggable="false" id="bamboo-os-image" src="images/bamboo-os.png" onclick="enlargeImage('bamboo-os-image');" alt="Screenshot of homemade operating system, called BambooOS">
+                            <div class="project-description">BambooOS is a feature-rich, x86_64 Operating System written in C with a UEFI bootloader, command-line, and support for:<br><br>
+                                <ul id="bamboo-os-list">
+                                    <li>Higher-half kernel</li>
+                                    <li>ACPI tables (RSDT, XSDT, MCFG, MADT)</li>
+                                    <li>Symmetric Multiprocessing (starting all other APs)</li>
+                                    <li>Full physical memory manager</li>
+                                    <li>Virtual memory manager</li>
+                                    <li>Heap allocator (malloc, free, realloc)</li>
+                                    <li>PCI support</li>
+                                    <li>Standard library functions</li>
+                                    <li>Interrupt handling</li>
+                                    <li>R/W to disk and FAT32 driver</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div></li>
+                    
+                    <li><div class="project">
+                        <h2 class="project-title">Engine Simulator</h2>
+                        <div class="project-contents">
+                            <img class="project-image undraggable" draggable="false" id="engine-sim-image" src="images/engine-simulator.png" onclick="enlargeImage('engine-sim-image');" alt="Screenshot of application which produces engine sounds">
+                            <div class="project-description">
+                                Engine Simulator is an application designed to accurately simulate the sound of an engine.
+                                Written in C++, the application uses physics and fluid simulations to model the physical engine, combustions, valves, and much more.
+                                The application also comes with a custom, completely hand-written UI drawn pixel-by-pixel, which is beautifully animated.
+                            </div>
+                        </div>
+                    </div></li>
+
+                    <li><div class="project">
+                        <h2 class="project-title">SC-8088</h2>
+                        <div class="project-contents">
+                            <img class="project-image undraggable" draggable="false" id="sc-8088-image" src="images/sc-8088.jpeg" onclick="enlargeImage('sc-8088-image');" alt="Image of computer built on breadboards displaying a hello message">
+                            <div class="project-description">
+                                The SC-8088 is a computer designed and built by me, using the famous 16-bit Intel 8088 processor (a variant of the 8086). The computer has
+                                992K of RAM and 32K of ROM, so is fairly powerful, and I have plans to add VGA output and PS2 keyboard support soon. This project followed on
+                                from a 6502-based computer I built back in 2022, however, this computer is the first which is completely designed by me from the ground up,
+                                and was built over the short span of 2 and a half days.
+                            </div>
+                        </div>
+                    </div></li>
+
+                    <li><div class="project">
+                        <h2 class="project-title">And many more...</h2>
+                        <div class="project-contents">
+                            <div class="project-gallery undraggable">
+                                <img class="undraggable" draggable="false" id="reliquia-image" src="images/reliquia.png" alt="Image of 2D pixel art game called Reliquia">
+                            </div>
+                            <div class="project-description">
+                                I have worked on numerous projects in Java, both in the past and recently on my degree course. In addition to the languages used in these projects, I have also worked with Haskell, Python, and Javascript.
+                            </div>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div id="contact-section">
+                <h1 id="contact-title" class="unselectable">Contact</h1>
+                
+                <div id="contact-subsection">
+                    <p style="text-align: center;">Feel free to reach out to me via my <a style="color: #4aa8d9;" href="https://uk.linkedin.com/in/sebastian-crookes">LinkedIn</a>.</p><br>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer-content">Made with ❤️️ by Sebastian Crookes<br>Copyright © 2025-2026 Sebastian Crookes - all rights reserved</div>
+        </footer>
+
+        <noscript>
+            <div id="no-script-message">
+                ‼️ - Please enable JavaScript
+            </div>
+        </noscript>
+    </body>
+</html>
